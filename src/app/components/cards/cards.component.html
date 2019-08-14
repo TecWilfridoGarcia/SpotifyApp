@@ -1,0 +1,62 @@
+<div class="row justify-content-end">
+  <div class="col align-self-end">
+  </div>
+</div>
+<div class="container  mt-3 ml-5">
+  <div class="row justify-content-between">
+    <div class="col-4">
+    </div>
+    <div class="col-4">
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+          aria-controls="collapseExample">
+          <img src="../../../assets/img/baseline-keyboard_arrow_down-24px.svg" alt="">Mostrar<img
+            src="../../../assets/img/baseline-build-24px.svg">
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <button class="btn btn-primary mb-3"><img class="img-play-list" src="../../../assets/img/baseline-list-24px.svg"
+          (click)="onDisplayModeChange(2)" [ngClass]="{'btn-primary active': displayMode === 2}" >List</button><br />
+        <button class="btn btn-primary"><img class="img-play-grid" src="../../../assets/img/baseline-grid_on-24px.svg"
+          (click)="onDisplayModeChange(1)" [ngClass]="{'btn-primary active': displayMode === 1}" >Grid</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- grid -->
+<ng-container *ngIf="displayMode === 1">
+  <div class="card-columns">
+    <div (click)="goToArtists(item)" *ngFor="let item of items" class="card puntero">
+      <div class="row">
+        <div class="col-sm-2"><img class="img-play-arrow" src="../../../assets/img/baseline-play_arrow-24px.svg" alt="">
+        </div>
+        <div class="col-sm-2"><img class="img-favorite" src="../../../assets/img/baseline-favorite_border-24px.svg"
+            alt=""></div>
+        <div class="col-sm-8"><img class="img-settings" src="../../../assets/img/baseline-settings-20px.svg" alt="">
+        </div>
+      </div>
+      <img [src]="item.images | noImg" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h6 class="card-title">{{ item.name }}</h6>
+        <h6 *ngFor="let artist of item.artists" class=" badge badge-pill badge-primary">{{ artist.name }}</h6>
+      </div>
+    </div>
+  </div>
+  </ng-container>
+
+
+  <!-- list -->
+  <ng-container *ngIf="displayMode === 2">
+    <ul class="list-group mt-2 puntero"  (click)="goToArtists(item)" *ngFor="let item of items">
+      <li class="list-group-item card-title list-item">
+        <div class="row">
+          <div class="col-sm-9"><h6>{{ item.name }}</h6></div>
+          <div class="col-sm-1"><img class="list-img-play-arrow" src="../../../assets/img/baseline-play_arrow-24px.svg" alt=""></div>
+          <div class="col-sm-1"><img class="list-img-favorite" src="../../../assets/img/baseline-favorite_border-24px.svg" alt=""></div>
+          <div class="col-sm-1"><img class="list-img-settings" src="../../../assets/img/baseline-settings-20px.svg" alt=""></div>
+        </div>
+      </li>
+    </ul>
+  </ng-container>

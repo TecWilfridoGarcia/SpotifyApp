@@ -1,0 +1,60 @@
+<div class="container mt-5">
+	<div class="row">
+		<div class="col">
+			<a (click)="goToBack()">
+				<img src="../../../assets/img/baseline-reply-24px.svg" alt="" class="reply">
+			</a>
+		</div>
+	</div>
+	<div class="row animated fadeIn">
+		<div class="col-sm-4">
+			<div class="row">
+				<div class="col-sm-12 img-track">
+					<img [src]="artist.images | noImg" alt="" class="item-images">
+				</div>
+				<div class="col-sm-12">
+					<img class="img-play-arrow d-flex float-left" src="../../../assets/img/baseline-play_arrow-24px.svg" alt="">
+					<img class="img-favorite d-flex float-left" src="../../../assets/img/baseline-favorite_border-24px.svg"
+						alt="">
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-8">
+			<ng-container>
+				<ul class="list-group mt-2 puntero">
+					<li class="list-group-item card-title list-item">
+						<div class="row list-item">
+							<div class="col-sm-6">
+								<h6 class="title-track">Name</h6>
+							</div>
+							<div class="col-sm-6">
+								<h6 class="title-track">Date</h6>
+							</div>
+						</div>
+					</li>
+					<li class="list-group-item card-title  mt-3" *ngFor="let track of topTracks">
+						<div class="row">
+
+							<div class="col col-img">
+								<iframe class="play-item" [src]="track.uri | domseguro" width="80" height="80" frameborder="0"
+								allowtransparency="true" allow="encrypted-media"></iframe>
+							</div>
+							<div class="col col-img">
+								<img class="list-img-favorite" [src]="track.album.images | noImg" alt="">
+							</div>
+							<div class="col col-img">
+								<p class="title-track">{{ track.name }}</p>
+							</div>
+							<div class="col col-img">
+								<p class="title-track">{{ track.album.name }}</p>
+							</div>
+							<div class="col col-img">
+								<p class="title-track">{{track.duration_ms}}</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</ng-container>
+		</div>
+	</div>
+</div>

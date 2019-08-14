@@ -1,0 +1,39 @@
+@media (min-width: 576px){
+    .card-columns .card {
+        display: inline-block;
+        width: 83%;
+        margin: 29px 17px !important;
+    }
+    }
+    .img-play-arrow ,.img-favorite{
+        width: 46px;
+        cursor: pointer;
+    }
+    .img-settings{
+        display: flex;
+        float: right;
+        width: 46px;
+        cursor: pointer;
+    }
+    .list{
+        display: none;
+        opacity: 1;
+    }
+
+    .list-item{
+        width: 64%;
+    }
+    .list-img-play-arrow{
+width: 38px;
+    }
+.list-img-favorite{
+    width: 38px;
+
+}
+.list-img-settings{
+    width: 38px;
+
+}
+button.active {
+    color: green;
+   }
