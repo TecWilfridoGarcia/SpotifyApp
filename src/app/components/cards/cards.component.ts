@@ -8,14 +8,21 @@ import { Router } from '@angular/router';
 })
 
 export class CardsComponent implements OnInit {
-  showModal = true;
   displayMode = 1;
+  myFavorite = false;
 
 @Input() items: any[] = [];
 
   constructor( private router: Router) { }
 
   ngOnInit() {
+  }
+  handleMyFavorite(item: any) {
+    if (item.id === true) {
+      this.myFavorite = item.id;
+    } else {
+      return false;
+    }
   }
 
   onDisplayModeChange(mode: number): void {

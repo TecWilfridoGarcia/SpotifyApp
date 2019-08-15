@@ -30,12 +30,13 @@
     font-size: 18px;
     padding: 0 16px;
     max-width: 265px;
-    width: 159px;
+    width: 151px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 .list-img-favorite{
     width: 49px;

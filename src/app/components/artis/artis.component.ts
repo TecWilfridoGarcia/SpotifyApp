@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, ElementRef, Renderer } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SpotifyService } from 'src/app/services/spotify.service';
 
@@ -8,10 +8,11 @@ import { SpotifyService } from 'src/app/services/spotify.service';
   styleUrls: ['./artist.component.css']
 })
 export class ArtisComponent {
+
   artist: any = {};
   topTracks: any[] = [];
 
-  constructor(private router: ActivatedRoute, private spotify: SpotifyService) {
+  constructor(private router: ActivatedRoute, private spotify: SpotifyService, public element: ElementRef, public renderer: Renderer) {
    this.router.params.subscribe(params => {
       // tslint:disable-next-line:no-string-literal
      this.getArtist( params['id']);

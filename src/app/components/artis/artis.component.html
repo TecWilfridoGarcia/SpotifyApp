@@ -24,19 +24,24 @@
 				<ul class="list-group mt-2 puntero">
 					<li class="list-group-item card-title list-item">
 						<div class="row list-item">
-							<div class="col-sm-6">
+								<div class="col">
+										<h6 class="title-track text-center">#</h6>
+									</div>
+							<div class="col">
 								<h6 class="title-track">Name</h6>
 							</div>
-							<div class="col-sm-6">
-								<h6 class="title-track">Date</h6>
+							<div class="col">
+								<h6 class="title-track">Album</h6>
 							</div>
+							<div class="col">
+									<h6 class="title-track">Time</h6>
+								</div>
 						</div>
 					</li>
 					<li class="list-group-item card-title  mt-3" *ngFor="let track of topTracks">
 						<div class="row">
-
 							<div class="col col-img">
-								<iframe class="play-item" [src]="track.uri | domseguro" width="80" height="80" frameborder="0"
+								<iframe class="play-item" id="myFrame" [src]="track.uri | domseguro" width="80" height="80" style="top:0;left:0" frameborder="0"
 								allowtransparency="true" allow="encrypted-media"></iframe>
 							</div>
 							<div class="col col-img">

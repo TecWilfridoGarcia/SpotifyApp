@@ -12,7 +12,7 @@ artists: any[] = [];
 
   search(term: string) {
    console.log(term);
-   this.spotify.getArtist( term )
+   this.spotify.getArtists( term )
    .subscribe(
      (data: any) => {
        this.artists = data;

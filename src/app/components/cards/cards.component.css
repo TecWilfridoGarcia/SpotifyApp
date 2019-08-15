@@ -37,3 +37,6 @@ width: 38px;
 button.active {
     color: green;
    }
+   .favorite{
+    background: red;
+}

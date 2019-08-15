@@ -18,6 +18,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { NoImgPipe } from './pipes/no-img.pipe';
 import { CardsComponent } from './components/cards/cards.component';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { ConvertPipe } from './pipes/convert.pipe';
 
 @NgModule({
     imports: [
@@ -39,6 +40,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
         NoImgPipe,
         DomseguroPipe,
         CardsComponent,
+        ConvertPipe
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

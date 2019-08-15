@@ -13,7 +13,7 @@ export class SpotifyService {
 
    const  headers = new HttpHeaders({
     // tslint:disable-next-line:object-literal-key-quotes
-    'Authorization': 'Bearer BQAeCz6JDqH25rjX0tpuS63_4FHzyMV4Euzis50Mn1Syvt_M7IdxbqFaCuwNxj9to-LXRexPt7kSmEVj4PY'
+    'Authorization': 'Bearer BQDjFa4fFJLYhmpEpBkkhMfyFYh-l8z75UWyYMYdffywog_o47plxA2wLw2UsEvKmftep5uIvnPBmsCb3FQ'
   });
    return this.http.get(url, {headers});
   }
