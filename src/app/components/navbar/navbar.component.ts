@@ -6,7 +6,7 @@ import { User } from 'src/app/models/user';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styles: []
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent  {
   currentUser: User;

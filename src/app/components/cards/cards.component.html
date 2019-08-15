@@ -15,9 +15,9 @@
         </a>
       </p>
       <div class="collapse" id="collapseExample">
-        <button class="btn btn-primary mb-3"  (click)="onDisplayModeChange(2)"><img class="img-play-list" src="../../../assets/img/baseline-list-24px.svg"
+        <button class="btn btn-primary mb-3 btn-list"  (click)="onDisplayModeChange(2)"><img class="img-play-list" src="../../../assets/img/baseline-list-24px.svg"
           [ngClass]="{'btn-primary active': displayMode === 2}" >List</button><br />
-        <button class="btn btn-primary"  (click)="onDisplayModeChange(1)"><img class="img-play-grid" src="../../../assets/img/baseline-grid_on-24px.svg"
+        <button class="btn btn-primary btn-grid"  (click)="onDisplayModeChange(1)"><img class="img-play-grid" src="../../../assets/img/baseline-grid_on-24px.svg"
           [ngClass]="{'btn-primary active': displayMode === 1}" >Grid</button>
       </div>
     </div>
@@ -37,7 +37,13 @@
           <img class="img-favorite" (click)="handleMyFavorite(item)" src="../../../assets/img/baseline-favorite_border-24px.svg"[ngClass]="{'favorite': myFavorite}">
         </div>
         <div class="col-sm-8">
-          <img class="img-settings" src="../../../assets/img/baseline-settings-20px.svg">
+            <a class="" data-toggle="collapse" href="#collapseExample1" role="button"
+            aria-expanded="false" aria-controls="collapseExample">
+            <img class="img-settings" src="../../../assets/img/baseline-settings-20px.svg">
+          </a>
+          <div class="collapse" id="collapseExample1">
+          <button class="">Ocultar</button><br />
+        </div>
         </div>
       </div>
       <div (click)="goToArtists(item)">

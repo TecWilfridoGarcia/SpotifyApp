@@ -40,3 +40,7 @@ button.active {
    .favorite{
     background: red;
 }
+.btn-list, .btn-grid{
+    width: 100px !important;
+    height: 39px !important;
+}
